@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090a0d;
+  --foreground: #f4f4f6;
+  --card-bg: #121418;
+  --card-border: #1e2128;
+  --accent-lime: #d4f434;
+  --accent-purple: #7c7bf2;
+  --font-open-sans: var(--font-open-sans);
+  --font-nunito-sans: var(--font-nunito-sans);
+}
+
+@theme {
+  --color-dash-dark: #0b0c0f;
+  --color-dash-card: #121418;
+  --color-dash-card-border: #1e2128;
+  --color-dash-card-hover: #171920;
+  --color-dash-lime: #d4f434;
+  --color-dash-lime-hover: #bfe025;
+  --color-dash-purple: #7c7bf2;
+  --color-dash-btc: #586b3a;
+  --color-dash-bnb: #857431;
+  --color-dash-usdt: #844d39;
+  --color-dash-sol: #3f4773;
+  --font-sans: var(--font-open-sans), var(--font-nunito-sans), system-ui, sans-serif;
+  --font-display: var(--font-nunito-sans), system-ui, sans-serif;
+}
+
+body {
+  background-color: #08090c;
+  color: #ededed;
+  font-family: var(--font-open-sans), var(--font-nunito-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Universal pointer cursor for all interactive elements across the entire dashboard */
+button,
+[role="button"],
+a,
+select,
+input[type="checkbox"],
+input[type="radio"],
+summary,
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Custom sleek scrollbar for data tables and responsive containers */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1014;
+}
+::-webkit-scrollbar-thumb {
+  background: #252932;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #373d4b;
+}
+
+/* Pulse animation for live data indicators */
+@keyframes live-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
+  }
+}
+
+.animate-live {
+  animation: live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
